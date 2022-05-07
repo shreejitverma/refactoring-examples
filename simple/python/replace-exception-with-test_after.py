@@ -1,4 +1,2 @@
 def getValueForPeriod(self, periodNumber):
-    if periodNumber >= len(self.values):
-        return 0
-    return self.values[periodNumber]
+    return 0 if periodNumber >= len(self.values) else self.values[periodNumber]

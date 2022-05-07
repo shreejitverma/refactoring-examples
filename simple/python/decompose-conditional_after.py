@@ -1,4 +1,1 @@
-if isSummer(date):
-    charge = summerCharge(quantity)
-else:
-    charge = winterCharge(quantity)
+charge = summerCharge(quantity) if isSummer(date) else winterCharge(quantity)

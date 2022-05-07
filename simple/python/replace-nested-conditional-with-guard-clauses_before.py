@@ -1,12 +1,7 @@
 def getPayAmount(self):
     if self.isDead:
-        result = deadAmount()
+        return deadAmount()
+    elif self.isSeparated:
+        return separatedAmount()
     else:
-        if self.isSeparated:
-            result = separatedAmount()
-        else:
-            if self.isRetired:
-                result = retiredAmount()
-            else:
-                result = normalPayAmount()
-    return result
+        return retiredAmount() if self.isRetired else normalPayAmount()

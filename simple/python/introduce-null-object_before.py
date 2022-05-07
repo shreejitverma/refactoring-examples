@@ -1,4 +1,1 @@
-if customer is None:
-    plan = BillingPlan.basic()
-else:
-    plan = customer.getPlan()
+plan = BillingPlan.basic() if customer is None else customer.getPlan()
